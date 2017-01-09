@@ -73,6 +73,7 @@ module.exports = {
         'quote-props':0,
         'no-console':0,
         'no-unneeded-ternary':0,
-        'no-confusing-arrow':0
+        'no-confusing-arrow':0,
+        'no-tabs':'off'
     }
 }

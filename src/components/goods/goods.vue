@@ -1,5 +1,5 @@
 <template>
 	<div>
-		xxxxxxxx
+		我是商品
 	</div>
 </template>

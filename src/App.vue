@@ -1,5 +1,6 @@
 <template>
   <div>
+      <headers :seller="seller"></headers>
       <div class="tab">
         <div class="tab-item">
             <router-link to="/goods" class="rl">商品</router-link>
@@ -14,7 +15,32 @@
       <router-view></router-view>
   </div>
 </template>
+<script>
+  import headers from './components/header/header.vue';
 
+
+  const ERR_OK = 0;
+  export default {
+    components: {
+      headers
+    },
+    data() {
+      return {
+        seller: {
+
+        }
+      };
+    },
+    created() {
+      this.$http.get('/api/seller').then((response) => {
+        response = response.body;
+        if(response.errno===ERR_OK) {
+          this.seller = response.data;
+        }
+      });
+    }
+  };
+</script>
 <style>
   .tab{
     display: flex;

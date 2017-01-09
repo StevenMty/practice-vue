@@ -1,5 +1,5 @@
 <template>
 	<div>
-		vvvvvv
+		我是评论.
 	</div>
 </template>
